@@ -1,0 +1,16 @@
+<table style="width: 90%;margin-left: 20px;border-collapse: collapse" border="1px solid">
+    <tr  >
+        <td>Employee Name</td>
+        <td>Employee Designation</td>
+        <td>Employee Email</td>
+        <td>Employee Mobile</td>
+        <td>Delete Employee</td>
+    </tr>
+    <tr *ngFor = "let emp of earray; let i = index">
+        <td>{{ emp.empName }}</td>
+        <td>{{ emp.empDes }}</td>
+        <td>{{ emp.empEmail }}</td>
+        <td>{{ emp.empMobile }}</td>
+        <td><input type="submit" (click)='delete(i)' value="Delete"></td>
+    </tr>
+</table>
